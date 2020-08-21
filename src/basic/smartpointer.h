@@ -19,6 +19,19 @@ public:
         std::cout << "release smart pointer at " << static_cast<const void*>(mPointer) << std::endl;
         if(mPointer) delete mPointer;
     }
+
+    SmartPointer(const SmartPointer &other)
+        : mPointer(other.mPointer) {
+        std::cout << "Copy smart pointer at " << static_cast<const void*>(other.mPointer) << std::endl;
+    }
+
+    SmartPointer& operator = (const SmartPointer &other) {
+        if(this == &other) return *this;
+        if(mPointer) delete mPointer;
+        mPointer = other.mPointer;
+        std::cout << "Assign smart pointer at " << static_cast<const void*>(other.mPointer) << std::endl;
+        return *this;
+    }
 };
 
 #endif // SMARTPOINTER_H_
