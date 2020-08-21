@@ -25,18 +25,18 @@ void testcase_2() {
 
     if (spsomeclass == nullptr) std::cout<< "spsomeclass is NULL pointer" << std::endl;
     if (spotherclass != nullptr) std::cout<< "spotherclass is not NULL pointer" << std::endl;
-    if (spsomeclass == psomeclass)  
+    if (spsomeclass == psomeclass)
        std::cout<< "spsomeclass and psomeclass are same pointer" << std::endl;
-    if (spsomeclass != psomeclass)  
+    if (spsomeclass != psomeclass)
        std::cout<< "spsomeclass and psomeclass are not same pointer" << std::endl;
 //     if (spsomeclass != spotherclass) // ERROR !
 //        std::cout<< "spsomeclass and spotherclass are not same pointer" << std::endl;
 //     if (spsomeclass == spotherclass) // ERROR !
 //        std::cout<< "spsomeclass and spotherclass are same pointer" << std::endl;
     if (spotherclass == spotherclass2) std::cout<< "spotherclass and spotherclass2 are same pointer" << std::endl;
-    if (spotherclass != spotherclass2) std::cout<< "spotherclass and spotherclass2 are not same pointer" << std::endl;    
+    if (spotherclass != spotherclass2) std::cout<< "spotherclass and spotherclass2 are not same pointer" << std::endl;
     std::cout << "==========================" <<std::endl;
-    
+
 }
 
 void testcase_1(void)
@@ -63,6 +63,7 @@ void testcase_base() {
     std::cout << std::endl;
     spclass2 = spclass1;
     std::cout << std::endl;
+    spclass2 = nullptr;
 }
 
 int main() {
