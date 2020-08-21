@@ -22,4 +22,5 @@ public:
 
     virtual ~RefBase() {}
 };
+
 #endif // REFBASE_H_

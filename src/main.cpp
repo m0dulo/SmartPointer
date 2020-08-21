@@ -1,18 +1,14 @@
 #include <iostream>
 #include "smartpointer.h"
 
-class SomeClass {
+class SomeClass : public RefBase {
 public:
-    SomeClass() {std::cout << "SomeClass default constructer" << std::endl;}
+    SomeClass() {std::cout << "SomeClass default constructer || address: "  << this << std::endl;}
+    ~SomeClass() {std::cout << "SomeClass deconstructor || address: " << this << std::endl;}
 };
 
-void testcase1() {
-   SmartPointer<char> spunknow;
-   SmartPointer<char> spnull = nullptr;
-   SmartPointer<SomeClass> spclass = new SomeClass;
-}
 
-void testcase2() {
+void testcase() {
     SmartPointer<SomeClass> spclass1 = new SomeClass;
     std::cout << std::endl;
     spclass1 = spclass1;
@@ -26,7 +22,7 @@ void testcase2() {
 }
 
 int main() {
-    testcase2();
-    testcase1();
+    testcase();
+
     return 0;
 }
